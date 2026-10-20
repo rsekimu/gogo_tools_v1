@@ -134,11 +134,16 @@ function Shifts() {
                   <div className="emp">
                     <div className="first">
                       <div className="emp_name">
-                        <span>John Doe</span>
+                        <span>Mery Doe</span>
                       </div>
                       <div className="shift-menue">
                         <div className="elips-icon">
-                          <img src={elips_icon} alt="" />
+                          <img
+                            onClick={openShiftMenue}
+                            id="display_shift_menue"
+                            src={elips_icon}
+                            alt=""
+                          />
                         </div>
                         <div className="shift-menue-card">
                           <button>Reassign Employee</button>
@@ -147,13 +152,88 @@ function Shifts() {
                       </div>
                     </div>
                     <div className="second">
-                      <span>Moning</span>
+                      <span>Moning</span>{" "}
                       <span>
                         <i>Normal</i>
                       </span>
                     </div>
                     <div className="third">
-                      <span>2026-10-20 06:28</span>
+                      <span>2026-10-20 </span> <span>06:28</span>
+                    </div>
+                    <div className="fourth">
+                      <span>Pending</span>
+                      <span>Current</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="tab" id="tab1">
+                <div className="day-part">
+                  <span>Tuesday</span>
+                </div>
+                <div className="emps-parts">
+                  <div className="emp">
+                    <div className="first">
+                      <div className="emp_name">
+                        <span>Tom Haddy Doe</span>
+                      </div>
+                      <div className="shift-menue">
+                        <div className="elips-icon">
+                          <img
+                            onClick={openShiftMenue}
+                            id="display_shift_menue"
+                            src={elips_icon}
+                            alt=""
+                          />
+                        </div>
+                        <div className="shift-menue-card">
+                          <button>Reassign Employee</button>
+                          <button>Delete Shift</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="second">
+                      <span>Moning</span>{" "}
+                      <span>
+                        <i>Normal</i>
+                      </span>
+                    </div>
+                    <div className="third">
+                      <span>2026-10-20 </span> <span>06:28</span>
+                    </div>
+                    <div className="fourth">
+                      <span>Pending</span>
+                      <span>Current</span>
+                    </div>
+                  </div>
+                  <div className="emp">
+                    <div className="first">
+                      <div className="emp_name">
+                        <span>Mark S</span>
+                      </div>
+                      <div className="shift-menue">
+                        <div className="elips-icon">
+                          <img
+                            onClick={openShiftMenue}
+                            id="display_shift_menue"
+                            src={elips_icon}
+                            alt=""
+                          />
+                        </div>
+                        <div className="shift-menue-card">
+                          <button>Reassign Employee</button>
+                          <button>Delete Shift</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="second">
+                      <span>Moning</span>{" "}
+                      <span>
+                        <i>Normal</i>
+                      </span>
+                    </div>
+                    <div className="third">
+                      <span>2026-10-20 </span> <span>06:28</span>
                     </div>
                     <div className="fourth">
                       <span>Pending</span>
