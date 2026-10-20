@@ -1,6 +1,32 @@
 import { Route, Link } from "react-router-dom";
 import "./card_styles/shifts.css";
+import elips_icon from "../assets/primary_icons/elips_icon_prim.png";
+import close_elips_icon from "../assets/primary_icons/close_elips_icon_prim.png";
+import { useState } from "react";
 function Shifts() {
+  const [shiftMenueCLosed, setShiftMenueCLosed] = useState(true);
+  function openShiftMenue(e) {
+    const display_shift_menue = document.querySelector("#display_shift_menue");
+    const shift_menue = document.querySelector(".shift-menue");
+    if (shiftMenueCLosed) {
+      shift_menue.style.width = "120px";
+      shift_menue.style.height = "100px";
+      shift_menue.style.marginLeft = "120px";
+      e.target.src = close_elips_icon;
+      setShiftMenueCLosed(false);
+    } else {
+      shift_menue.style.width = "20px";
+      shift_menue.style.height = "20px";
+      shift_menue.style.marginLeft = "120px";
+      e.target.src = elips_icon;
+      setShiftMenueCLosed(true);
+    }
+  }
+
+  function closeShiftMenue() {
+    console("closing shift menue");
+  }
+
   return (
     <div className="shifts-card">
       <div className="stock-data">
@@ -59,6 +85,80 @@ function Shifts() {
                 <span>26</span>
                 <span>27</span>
                 <button>{">"}</button>
+              </div>
+            </div>
+          </div>
+          <div className="shift_tabs">
+            <div className="tabs">
+              <div className="tab" id="tab1">
+                <div className="day-part">
+                  <span>Monday</span>
+                </div>
+                <div className="emps-parts">
+                  <div className="emp">
+                    <div className="first">
+                      <div className="emp_name">
+                        <span>John Doe</span>
+                      </div>
+                      <div className="shift-menue">
+                        <div className="elips-icon">
+                          <img
+                            onClick={openShiftMenue}
+                            id="display_shift_menue"
+                            src={elips_icon}
+                            alt=""
+                          />
+                        </div>
+                        <div className="shift-menue-card">
+                          <button>Reassign Employee</button>
+                          <button>Delete Shift</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="second">
+                      <span>Moning</span>{" "}
+                      <span>
+                        <i>Normal</i>
+                      </span>
+                    </div>
+                    <div className="third">
+                      <span>2026-10-20 </span> <span>06:28</span>
+                    </div>
+                    <div className="fourth">
+                      <span>Pending</span>
+                      <span>Current</span>
+                    </div>
+                  </div>
+                  <div className="emp">
+                    <div className="first">
+                      <div className="emp_name">
+                        <span>John Doe</span>
+                      </div>
+                      <div className="shift-menue">
+                        <div className="elips-icon">
+                          <img src={elips_icon} alt="" />
+                        </div>
+                        <div className="shift-menue-card">
+                          <button>Reassign Employee</button>
+                          <button>Delete Shift</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="second">
+                      <span>Moning</span>
+                      <span>
+                        <i>Normal</i>
+                      </span>
+                    </div>
+                    <div className="third">
+                      <span>2026-10-20 06:28</span>
+                    </div>
+                    <div className="fourth">
+                      <span>Pending</span>
+                      <span>Current</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

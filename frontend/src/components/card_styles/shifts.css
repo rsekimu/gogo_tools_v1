@@ -3,6 +3,8 @@
 }
 
 .shifts-card {
+  width: 100%;
+  height: 100%;
   background: rgb(226, 178, 99);
   display: flex;
   align-items: center;
@@ -44,7 +46,6 @@
   border: 2px solid rgb(80, 3, 173);
 }
 
-
 .shifts-card .stock-data .header .second {
   /* border: 1px solid yellow; */
   /* margin-right: 20px; */
@@ -63,38 +64,196 @@
 }
 
 .shifts-card .stock-data .body .head .date-dv {
-    border: 1px solid yellow;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 10px;
+  border: 1px solid yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
 }
 .shifts-card .stock-data .body .head .date-dv span {
-    font-size: 15px;
-    color: goldenrod;
+  font-size: 15px;
+  color: goldenrod;
 }
 .shifts-card .stock-data .body .head .date-dv .dates {
-    border: 1px solid aqua;
+  border: 1px solid aqua;
 }
 .shifts-card .stock-data .body .head .date-dv .dates span {
-    padding: 4px ;
-    background: rgb(23, 23, 23);
-    border-radius: 50%;
-    font-size: 11px;
-    margin: 1.5px;
+  padding: 4px;
+  background: rgb(23, 23, 23);
+  border-radius: 50%;
+  font-size: 11px;
+  margin: 1.5px;
 }
 .shifts-card .stock-data .body .head .date-dv .dates button {
-    padding: 4px ;
-    /* background: gray; */
-    border-radius: 50%;
-    font-size: 11px;
-    cursor: pointer;
-    
+  padding: 4px;
+  /* background: gray; */
+  border-radius: 50%;
+  font-size: 11px;
+  cursor: pointer;
 }
 .shifts-card .stock-data .body {
   width: 100%;
   height: 90%;
   background: rgb(14, 73, 67);
   display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: space-evenly; */
+}
+.shifts-card .stock-data .body .head {
+  width: 100%;
+  height: 10%;
+  background: goldenrod;
+  display: flex;
   flex-direction: row;
+  align-items: left;
+}
+
+/* SHIFT TABS STYLES */
+.shifts-card .stock-data .body .shift_tabs {
+  border: 1px solid red;
+  width: 100%;
+  height: 90%;
+}
+.shifts-card .stock-data .body .shift_tabs .tabs {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content:;
+  transition: 0.2s all;
+}
+.shifts-card .stock-data .body .shift_tabs .tabs .tab {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 0.3s all ease-in;
+  padding: 5px;
+  border: 1px solid gainsboro;
+}
+.shifts-card .stock-data .body .shift_tabs .tabs .tab .day-part {
+  border: 1px solid black;
+  width: 10%;
+  transition: 0.3s all ease-in;
+}
+.shifts-card .stock-data .body .shift_tabs .tabs .tab .emps-parts {
+  width: 90%;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: scroll;
+  scrollbar-width: thin;
+  scroll-behavior: smooth;
+  scrollbar-color: red;
+  transition: 0.3s all ease-in;
+}
+.shifts-card .stock-data .body .shift_tabs .tabs .tab .emps-parts .emp {
+  width: 150px;
+  height: 95%;
+  background: gray;
+  border-radius: 0.3em;
+  margin-left: 5px;
+  padding: 5px;
+  transition: 0.3s all ease-in;
+  position: relative;
+}
+.shifts-card .stock-data .body .shift_tabs .tabs .tab .emps-parts .emp .first {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* position: relative; */
+}
+
+.tab .emps-parts .emp .first img {
+  cursor: pointer;
+}
+
+.tab .emps-parts .emp .first .shift-menue {
+  background: navy;
+  color: whitesmoke;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  border-radius: 0.4em;
+  transition: 0.2s all linear;
+  position: fixed;
+  margin-left: 120px;
+  /* left: 500px; */
+  /* top: 10px; */
+}
+
+.tab
+  .emps-parts
+  .emp
+  .first
+  img:hover
+  > .tab
+  .emps-parts
+  .emp
+  .first
+  .shift-menue {
+  width: 120px;
+  height: 100px;
+}
+
+.tab .emps-parts .emp .first .shift-menue .shift-menue-card {
+  background: navy;
+  color: whitesmoke;
+  width: 100%;
+  height: 90%;
+  border-radius: 0.4em;
+  transition: 0.2s all linear;
+  display: flex;
+  flex-direction: column;
+}
+.tab .emps-parts .emp .first .shift-menue .shift-menue-card button {
+  font-size: 10px;
+  width: 90%;
+  margin: 2px;
+  padding: 2px;
+  cursor: pointer;
+}
+.tab .emps-parts .emp .second {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: space-evenly; */
+}
+
+.tab .emps-parts .emp .second span {
+  color: #073b62;
+  font-size: 14px;
+}
+
+.tab .emps-parts .emp .second span:last-child {
+  margin-left: 5px;
+}
+
+.tab .emps-parts .emp .third span {
+  color: #073b62;
+  font-size: 13px;
+}
+
+.tab .emps-parts .emp .third span:last-child {
+  margin-left: 5px;
+}
+
+.tab .emps-parts .emp .fourth span {
+  color: #073b62;
+  font-size: 15px;
+}
+
+.tab .emps-parts .emp .fourth span:last-child {
+  margin-left: 5px;
+}
+.shifts-card .stock-data .body .shift_tabs .tabs .emps-parts .shift-menue-card {
+  /* display: none; */
+}
+.shifts-card .stock-data .body .shift_tabs img {
+  width: 20px;
 }
