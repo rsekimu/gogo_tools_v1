@@ -1,0 +1,81 @@
+.header-dv {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-dv img {
+  width: 40px;
+}
+.header-dv .first {
+  width: 40%;
+  height: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-dv .first .logo {
+  width: 50%;
+  height: 100%;
+  /* background: brown; */
+  display: flex;
+  align-items: center;
+}
+.header-dv .first .logo img {
+  margin-left: 20px;
+  border-radius: 50%;
+}
+.header-dv .first .subject {
+  width: 50%;
+  height: 100%;
+  /* background: blue; */
+  display: flex;
+  align-items: center;
+}
+.header-dv .first .subject span {
+  font-size: 20px;
+  font-weight: bolder;
+}
+.header-dv .second {
+  width: 40%;
+  height: 100%;
+  /* border: 1px solid #0d00ff; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  margin-right: 20px;
+}
+.header-dv .second .user {
+  padding: 5px;
+  /* border: 1px solid goldenrod; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header-dv .second .user img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 4px;
+  background: mediumaquamarine;
+}
+.header-dv .second button {
+  position: fixed;
+  /* right: 50px; */
+  /* bottom: 20px; */
+  visibility: hidden;
+  transition: 0.2s all;
+  cursor: pointer;
+}
+.header-dv .second .user:hover > button {
+  visibility: visible;
+  background: navy;
+  color: honeydew;
+}

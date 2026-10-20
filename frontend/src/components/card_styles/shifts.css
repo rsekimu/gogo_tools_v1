@@ -1,0 +1,100 @@
+* {
+  /* transition: 0.3s all; */
+}
+
+.shifts-card {
+  background: rgb(226, 178, 99);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shifts-card .stock-data {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+}
+.shifts-card .stock-data .header {
+  width: 100%;
+  height: 10%;
+  background: navy;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+.shifts-card .stock-data .header .first {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+}
+.shifts-card .stock-data .header .first .selects-dv select {
+  width: 120px;
+  padding: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  outline-color: rgb(80, 3, 173);
+  border-radius: 0.3em;
+  margin-left: 10px;
+  transition: 0.2s all linear;
+  background: rgb(211, 198, 246);
+  color: rgb(37, 6, 109);
+}
+.shifts-card .stock-data .header select:hover {
+  border: 2px solid rgb(80, 3, 173);
+}
+
+
+.shifts-card .stock-data .header .second {
+  /* border: 1px solid yellow; */
+  /* margin-right: 20px; */
+}
+.shifts-card .stock-data .header .second button {
+  width: 90px;
+  padding: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  outline-color: rgb(80, 3, 173);
+  border-radius: 0.3em;
+  margin-left: 10px;
+  transition: 0.2s all linear;
+  background: rgb(211, 198, 246);
+  color: rgb(37, 6, 109);
+}
+
+.shifts-card .stock-data .body .head .date-dv {
+    border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+}
+.shifts-card .stock-data .body .head .date-dv span {
+    font-size: 15px;
+    color: goldenrod;
+}
+.shifts-card .stock-data .body .head .date-dv .dates {
+    border: 1px solid aqua;
+}
+.shifts-card .stock-data .body .head .date-dv .dates span {
+    padding: 4px ;
+    background: rgb(23, 23, 23);
+    border-radius: 50%;
+    font-size: 11px;
+    margin: 1.5px;
+}
+.shifts-card .stock-data .body .head .date-dv .dates button {
+    padding: 4px ;
+    /* background: gray; */
+    border-radius: 50%;
+    font-size: 11px;
+    cursor: pointer;
+    
+}
+.shifts-card .stock-data .body {
+  width: 100%;
+  height: 90%;
+  background: rgb(14, 73, 67);
+  display: flex;
+  flex-direction: row;
+}

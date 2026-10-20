@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+  
+}
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  background: wheat;
+}
+
+.page .header-section {
+  width: 100%;
+  height: 9%;
+  background: gainsboro;
+}
+.page .main-section {
+  width: 100%;
+  height: 91%;
+  background: navy;
+  display: flex;
+  flex-direction: row;
+}
+.page .main-section .sidbar-sector {
+  width: 14%;
+  height: 100%;
+  background: gray;
+}
+.page .main-section .content-sector {
+  width: 86%;
+  height: 100%;
+  background: rgb(80, 75, 75);
+}
+.page .main-section .content-sector .dv-card {
+  width: 100%;
+  height: 100%;
+  /* background: red; */
+}
