@@ -11,13 +11,15 @@ function Shifts() {
     if (shiftMenueCLosed) {
       shift_menue.style.width = "120px";
       shift_menue.style.height = "100px";
-      shift_menue.style.marginLeft = "120px";
+      shift_menue.style.marginLeft = "20px";
+      shift_menue.style.marginTop = "20px";
       e.target.src = close_elips_icon;
       setShiftMenueCLosed(false);
     } else {
       shift_menue.style.width = "20px";
       shift_menue.style.height = "20px";
       shift_menue.style.marginLeft = "120px";
+      shift_menue.style.marginTop = "";
       e.target.src = elips_icon;
       setShiftMenueCLosed(true);
     }
