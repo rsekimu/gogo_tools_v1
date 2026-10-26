@@ -2,7 +2,283 @@ import { Route, Link } from "react-router-dom";
 import "./card_styles/shifts.css";
 import elips_icon from "../assets/primary_icons/elips_icon_prim.png";
 import close_elips_icon from "../assets/primary_icons/close_elips_icon_prim.png";
+import close_pop_prim from "../assets/primary_icons/close_pop_prim.png";
+import drop_down_prim from "../assets/primary_icons/drop_down_prim.png";
+import drop_right_prim from "../assets/primary_icons/drop_right_prim.png";
+import save_shift_prim from "../assets/primary_icons/save_shift_prim.png";
+import publish_shift_prim from "../assets/primary_icons/publish_shift_prim.png";
 import { useState } from "react";
+
+function OpenAddShiftPop() {
+  return (
+    <div className="new_shift_pop">
+      <div className="head">
+        <span>New Shifts</span>
+        <button>
+          <img src={close_pop_prim} alt="X" />
+        </button>
+      </div>
+      <div className="content">
+        <div className="body">
+          <div className="shifts_form">
+            <div className="bdy-first">
+              <div className="title">
+                <span>Select Date</span>
+              </div>
+              <div className="dvs">
+                <div className="start_date shift_dates">
+                  <span>Start Date</span>
+                  <input type="date" id="shifts_start_date " />
+                </div>
+                <div className="end_date shift_dates">
+                  <span>End Date</span>
+                  <input type="date" id="shifts_end_date" />
+                </div>
+              </div>
+            </div>
+            <div className="bdy-second">
+              <div className="title">
+                <span>Morning Shift</span>
+              </div>
+              <div className="dvs">
+                <div className="first-dv">
+                  <div className="emp-drop-down">
+                    <div className="head">
+                      <span>From Station</span>
+                      <img src={drop_down_prim} alt="Drop down" />
+                    </div>
+                    <div className="drop-down">
+                      <button>
+                        John Doe <i>cxc</i>
+                      </button>
+                      <button>
+                        Mark SM <i>cxc</i>
+                      </button>
+                      <button>
+                        Tom Haddy <i>cxc</i>
+                      </button>
+                    </div>
+                  </div>
+                  <div className="emp-drop-down">
+                    <div className="head">
+                      <span>Other Station</span>
+                      <img src={drop_down_prim} alt="Drop down" />
+                    </div>
+                    <div className="drops">
+                      <div className="drop-down">
+                        <span>
+                          Namungoona <img src={drop_right_prim} />
+                        </span>
+                        <span>
+                          Ruga Rd <img src={drop_right_prim} />
+                        </span>
+                        <span>
+                          Mengo <img src={drop_right_prim} />
+                        </span>
+                        <span>
+                          Ndeba <img src={drop_right_prim} />
+                        </span>
+                      </div>
+                      <div className="drop-right">
+                        <div className="title">
+                          <span>CXS at Nansana</span>
+                        </div>
+                        <div className="drop-dv">
+                          <button>
+                            Henry Sekabya <i>cxc</i>
+                          </button>
+                          <button>
+                            Ronnie Rods <i>cxc</i>
+                          </button>
+                          <button>
+                            Eddy Charlse <i>cxc</i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="second">
+                    <label>
+                      <span>Start</span>
+                      <input type="time" id="morning_shift_start_tm" />
+                    </label>
+                    <label>
+                      <span>Ends</span>
+                      <input type="time" id="morning_shift_start_tm" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bdy-third">
+              <div className="title">
+                <span>Afternoon Shift</span>
+              </div>
+              <div className="dvs">
+                <div className="first">
+                  <div className="emp-drop-down">
+                    <div className="head">
+                      <span>From Station</span>
+                      <img src={drop_down_prim} alt="Drop down" />
+                    </div>
+                    <div className="drop-down">
+                      <button>
+                        John Doe <i>cxc</i>
+                      </button>
+                      <button>
+                        Mark SM <i>cxc</i>
+                      </button>
+                      <button>
+                        Tom Haddy <i>cxc</i>
+                      </button>
+                    </div>
+                  </div>
+                  <div className="emp-drop-down">
+                    <div className="head">
+                      <span>Other Station</span>
+                      <img src={drop_down_prim} alt="Drop down" />
+                    </div>
+                    <div className="drop-down">
+                      <span>
+                        Namungoona <img src={drop_right_prim} />
+                      </span>
+                      <span>
+                        Ruga Rd <img src={drop_right_prim} />
+                      </span>
+                      <span>
+                        Mengo <img src={drop_right_prim} />
+                      </span>
+                      <span>
+                        Ndeba <img src={drop_right_prim} />
+                      </span>
+                    </div>
+                    <div className="drop-right">
+                      <div className="title">
+                        <span>CXS at Nansana</span>
+                      </div>
+                      <div className="drop-dv">
+                        <button>
+                          Henry Sekabya <i>cxc</i>
+                        </button>
+                        <button>
+                          Ronnie Rods <i>cxc</i>
+                        </button>
+                        <button>
+                          Eddy Charlse <i>cxc</i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="second">
+                    <label>
+                      <span>Start</span>
+                      <input type="time" id="morning_shift_start_tm" />
+                    </label>
+                    <label>
+                      <span>Ends</span>
+                      <input type="time" id="morning_shift_start_tm" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bdy-fouth">
+              <div className="title">
+                <span>Evening Shift</span>
+              </div>
+              <div className="dvs">
+                <div className="first">
+                  <div className="emp-drop-down">
+                    <div className="head">
+                      <span>From Station</span>
+                      <img src={drop_down_prim} alt="Drop down" />
+                    </div>
+                    <div className="drop-down">
+                      <button>
+                        John Doe <i>cxc</i>
+                      </button>
+                      <button>
+                        Mark SM <i>cxc</i>
+                      </button>
+                      <button>
+                        Tom Haddy <i>cxc</i>
+                      </button>
+                    </div>
+                  </div>
+                  <div className="emp-drop-down">
+                    <div className="head">
+                      <span>Other Station</span>
+                      <img src={drop_down_prim} alt="Drop down" />
+                    </div>
+                    <div className="drop-down">
+                      <span>
+                        Namungoona <img src={drop_right_prim} />
+                      </span>
+                      <span>
+                        Ruga Rd <img src={drop_right_prim} />
+                      </span>
+                      <span>
+                        Mengo <img src={drop_right_prim} />
+                      </span>
+                      <span>
+                        Ndeba <img src={drop_right_prim} />
+                      </span>
+                    </div>
+                    <div className="drop-right">
+                      <div className="title">
+                        <span>CXS at Nansana</span>
+                      </div>
+                      <div className="drop-dv">
+                        <button>
+                          Henry Sekabya <i>cxc</i>
+                        </button>
+                        <button>
+                          Ronnie Rods <i>cxc</i>
+                        </button>
+                        <button>
+                          Eddy Charlse <i>cxc</i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="second">
+                    <label>
+                      <span>Start</span>
+                      <input type="time" id="morning_shift_start_tm" />
+                    </label>
+                    <label>
+                      <span>Ends</span>
+                      <input type="time" id="morning_shift_start_tm" />
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="footer">
+          <div className="btns">
+            <button>
+              <div className="btn-content">
+                <span>Save</span>
+                <img src={save_shift_prim} />
+              </div>
+              <div className="btn-spinner"></div>
+            </button>
+            <button>
+              <div className="btn-content">
+                <span>Publish</span>
+                <img src={publish_shift_prim} />
+              </div>
+              <div className="btn-spinner"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function Shifts() {
   const [shiftMenueCLosed, setShiftMenueCLosed] = useState(true);
   function openShiftMenue(e) {
@@ -245,6 +521,9 @@ function Shifts() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="pop_dv">
+        <OpenAddShiftPop />
       </div>
     </div>
   );

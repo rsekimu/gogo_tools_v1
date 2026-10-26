@@ -257,3 +257,202 @@
 .shifts-card .stock-data .body .shift_tabs img {
   width: 20px;
 }
+
+.pop_dv {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background: #00000024;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pop_dv .new_shift_pop {
+  width: 80%;
+  height: 90%;
+  border: 1px solid gainsboro;
+  border-radius: 0.3em;
+  background: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.pop_dv .new_shift_pop .head {
+  width: 100%;
+  height: 5%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: navajowhite;
+}
+.pop_dv .new_shift_pop .head span {
+  margin-left: 10px;
+}
+.pop_dv .new_shift_pop .head button {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s all ease-in-out;
+  cursor: pointer;
+  border-radius: 0.5em;
+  border: none;
+}
+.pop_dv .new_shift_pop .head button img {
+  width: 100%;
+  border-radius: 0.3em;
+}
+.pop_dv .new_shift_pop .head button:hover {
+  background: skyblue;
+}
+.pop_dv .new_shift_pop .content {
+  width: 50%;
+  height: 90%;
+  border: 1px solid black;
+}
+.pop_dv .new_shift_pop .content .body {
+  width: 100%;
+  height: 100%;
+  background: rgb(70, 85, 90);
+}
+.pop_dv .new_shift_pop .content .body .shifts_form {
+  width: 100%;
+  height: 100%;
+  border: 1px solid lime;
+}
+.pop_dv .new_shift_pop .content .body .shifts_form .bdy-first {
+  background: gold;
+  width: 90%;
+}
+.pop_dv .new_shift_pop .content .body .shifts_form .bdy-first .title {
+  border: 1px solid red;
+  padding: 5px;
+  font-size: 18px;
+}
+.pop_dv .new_shift_pop .content .body .shifts_form .bdy-first .title span {
+  color: navy;
+}
+.pop_dv .new_shift_pop .content .body .shifts_form .bdy-first .dvs {
+  width: 60%;
+  /* height: 100px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #073b62;
+}
+.pop_dv
+  .new_shift_pop
+  .content
+  .body
+  .shifts_form
+  .bdy-first
+  .dvs
+  .shift_dates {
+  width: 95%;
+  height: 50%;
+  padding: 5px;
+}
+.pop_dv
+  .new_shift_pop
+  .content
+  .body
+  .shifts_form
+  .bdy-first
+  .dvs
+  .shift_dates
+  span {
+  color: whitesmoke;
+  margin: 8px;
+  font-size: 14px;
+}
+.pop_dv
+  .new_shift_pop
+  .content
+  .body
+  .shifts_form
+  .bdy-first
+  .dvs
+  .shift_dates
+  input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+}
+.pop_dv .new_shift_pop .content .body .shifts_form .bdy-second {
+  background: rgb(12, 98, 121);
+  width: 90%;
+}
+.pop_dv .new_shift_pop .content .body .shifts_form .bdy-second .title {
+}
+.pop_dv .new_shift_pop .content .body .shifts_form .bdy-second .title span {
+  color: rgb(246, 9, 194);
+  font-weight: bold;
+  margin-left: 8px;
+}
+.pop_dv .new_shift_pop .content .body .shifts_form .bdy-second .dvs {
+  width: 50%;
+  background: rgb(118, 176, 82);
+}
+
+.shifts_form .bdy-second .dvs .emp-drop-down {
+  background: rgb(149, 127, 127);
+  width: 60%;
+}
+.shifts_form .bdy-second .dvs .emp-drop-down .head {
+  color: limegreen;
+}
+.shifts_form .bdy-second .dvs .emp-drop-down .drop-down {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-evenly;
+}
+.shifts_form .bdy-second .dvs .emp-drop-down .drop-down button {
+  padding: 5px;
+  text-align: left;
+  text-indent: 5px;
+}
+.shifts_form .bdy-second .dvs .emp-drop-down .drops .drop-down span {
+}
+.shifts_form .bdy-second .dvs .emp-drop-down .drops .drop-down span {
+  margin-right: 10px;
+  border: 2px solid rgb(94, 255, 0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  text-indent: 5px;
+}
+.shifts_form .bdy-second .dvs .emp-drop-down .drop-down span img {
+  width: 18px;
+  margin-right: 10px;
+}
+.shifts_form .bdy-second .dvs .emp-drop-down .drop-right {
+  border: 1px solid yellow;
+  transition: 0.2s all ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.shifts_form .bdy-second .dvs .emp-drop-down .drop-right button {
+  background: brown;
+  width: 100%;
+}
+
+.pop_dv .new_shift_pop .footer {
+  width: 100%;
+  border: 1px solid black;
+}
+.pop_dv .new_shift_pop img {
+  width: 20px;
+}
