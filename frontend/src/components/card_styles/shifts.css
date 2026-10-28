@@ -121,7 +121,6 @@
   display: flex;
   flex-direction: column;
   /* align-items: center; */
-  justify-content:;
   transition: 0.2s all;
 }
 .shifts-card .stock-data .body .shift_tabs .tabs .tab {
@@ -425,7 +424,7 @@
 }
 .shifts_form .bdy-second .dvs .emp-drop-down .drops .drop-down span {
   margin-right: 10px;
-  border: 2px solid rgb(94, 255, 0);
+  border: 2px solid rgb(102, 0, 255);
   display: flex;
   flex-direction: row;
   align-items: center;

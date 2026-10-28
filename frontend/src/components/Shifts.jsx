@@ -9,7 +9,37 @@ import save_shift_prim from "../assets/primary_icons/save_shift_prim.png";
 import publish_shift_prim from "../assets/primary_icons/publish_shift_prim.png";
 import { useState } from "react";
 
-function OpenAddShiftPop() {
+function OpenAddShiftPop(props) {
+  let { showMorningOtherStations, setShowMorningOtherStations } = props;
+  function drop_side_otherStationsFunc() {
+    if (showMorningOtherStations.stations == true) {
+      setShowMorningOtherStations({
+        ...showMorningOtherStations,
+        stations: false,
+      });
+    } else {
+      setShowMorningOtherStations({
+        ...showMorningOtherStations,
+        stations: true,
+      });
+    }
+    console.log("Drop SIde for other Stations", showMorningOtherStations);
+  }
+  function drop_side_otherStationsEmpsFunc() {
+    if (showMorningOtherStations.employees == true) {
+      setShowMorningOtherStations({
+        ...showMorningOtherStations,
+        employees: false,
+      });
+    } else {
+      setShowMorningOtherStations({
+        ...showMorningOtherStations,
+        employees: true,
+      });
+    }
+    console.log("Drop SIde for other Stations", showMorningOtherStations);
+  }
+
   return (
     <div className="new_shift_pop">
       <div className="head">
@@ -60,13 +90,21 @@ function OpenAddShiftPop() {
                     </div>
                   </div>
                   <div className="emp-drop-down">
-                    <div className="head">
+                    <div className="head" onClick={drop_side_otherStationsFunc}>
                       <span>Other Station</span>
                       <img src={drop_down_prim} alt="Drop down" />
                     </div>
-                    <div className="drops">
+                    <div
+                      className="drops"
+                      style={{
+                        display:
+                          props.showMorningOtherStations.stations == true
+                            ? "none"
+                            : "block",
+                      }}
+                    >
                       <div className="drop-down">
-                        <span>
+                        <span onClick={drop_side_otherStationsEmpsFunc}>
                           Namungoona <img src={drop_right_prim} />
                         </span>
                         <span>
@@ -79,7 +117,15 @@ function OpenAddShiftPop() {
                           Ndeba <img src={drop_right_prim} />
                         </span>
                       </div>
-                      <div className="drop-right">
+                      <div
+                        className="drop-right"
+                        style={{
+                          display:
+                            showMorningOtherStations.employees == true
+                              ? "none"
+                              : "block",
+                        }}
+                      >
                         <div className="title">
                           <span>CXS at Nansana</span>
                         </div>
@@ -281,6 +327,10 @@ function OpenAddShiftPop() {
 
 function Shifts() {
   const [shiftMenueCLosed, setShiftMenueCLosed] = useState(true);
+  const [showMorningOtherStations, setShowMorningOtherStations] = useState({
+    stations: false,
+    employees: false,
+  });
   function openShiftMenue(e) {
     const display_shift_menue = document.querySelector("#display_shift_menue");
     const shift_menue = document.querySelector(".shift-menue");
@@ -523,7 +573,12 @@ function Shifts() {
         </div>
       </div>
       <div className="pop_dv">
-        <OpenAddShiftPop />
+        <OpenAddShiftPop
+          shiftMenueCLosed={shiftMenueCLosed}
+          setShiftMenueCLosed={setShiftMenueCLosed}
+          setShowMorningOtherStations={setShowMorningOtherStations}
+          showMorningOtherStations={showMorningOtherStations}
+        />
       </div>
     </div>
   );
