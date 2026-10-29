@@ -11,6 +11,19 @@ import { useState } from "react";
 
 function OpenAddShiftPop(props) {
   let { showMorningOtherStations, setShowMorningOtherStations } = props;
+  function drop_down_StationsFunc() {
+    if (showMorningOtherStations.station == true) {
+      setShowMorningOtherStations({
+        ...showMorningOtherStations,
+        station: false,
+      });
+    } else {
+      setShowMorningOtherStations({
+        ...showMorningOtherStations,
+        station: true,
+      });
+    }
+  }
   function drop_side_otherStationsFunc() {
     if (showMorningOtherStations.stations == true) {
       setShowMorningOtherStations({
@@ -23,7 +36,7 @@ function OpenAddShiftPop(props) {
         stations: true,
       });
     }
-    console.log("Drop SIde for other Stations", showMorningOtherStations);
+    // console.log("Drop SIde for other Stations", showMorningOtherStations);
   }
   function drop_side_otherStationsEmpsFunc() {
     if (showMorningOtherStations.employees == true) {
@@ -37,7 +50,7 @@ function OpenAddShiftPop(props) {
         employees: true,
       });
     }
-    console.log("Drop SIde for other Stations", showMorningOtherStations);
+    // console.log("Drop SIde for other Stations", showMorningOtherStations);
   }
 
   return (
@@ -73,11 +86,19 @@ function OpenAddShiftPop(props) {
               <div className="dvs">
                 <div className="first-dv">
                   <div className="emp-drop-down">
-                    <div className="head">
+                    <div className="head" onClick={drop_down_StationsFunc}>
                       <span>From Station</span>
                       <img src={drop_down_prim} alt="Drop down" />
                     </div>
-                    <div className="drop-down">
+                    <div
+                      className="drop-down"
+                      style={{
+                        height:
+                          showMorningOtherStations.station == true
+                            ? "150px"
+                            : "0px",
+                      }}
+                    >
                       <button>
                         John Doe <i>cxc</i>
                       </button>
@@ -97,33 +118,33 @@ function OpenAddShiftPop(props) {
                     <div
                       className="drops"
                       style={{
-                        display:
+                        height:
                           props.showMorningOtherStations.stations == true
-                            ? "none"
-                            : "block",
+                            ? "150px"
+                            : "0px",
                       }}
                     >
                       <div className="drop-down">
                         <span onClick={drop_side_otherStationsEmpsFunc}>
                           Namungoona <img src={drop_right_prim} />
                         </span>
-                        <span>
+                        <span onClick={drop_side_otherStationsEmpsFunc}>
                           Ruga Rd <img src={drop_right_prim} />
                         </span>
-                        <span>
+                        <span onClick={drop_side_otherStationsEmpsFunc}>
                           Mengo <img src={drop_right_prim} />
                         </span>
-                        <span>
+                        <span onClick={drop_side_otherStationsEmpsFunc}>
                           Ndeba <img src={drop_right_prim} />
                         </span>
                       </div>
                       <div
                         className="drop-right"
                         style={{
-                          display:
+                          height:
                             showMorningOtherStations.employees == true
-                              ? "none"
-                              : "block",
+                              ? "150px"
+                              : "0px",
                         }}
                       >
                         <div className="title">
@@ -330,6 +351,7 @@ function Shifts() {
   const [showMorningOtherStations, setShowMorningOtherStations] = useState({
     stations: false,
     employees: false,
+    station: false,
   });
   function openShiftMenue(e) {
     const display_shift_menue = document.querySelector("#display_shift_menue");
