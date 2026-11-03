@@ -49,6 +49,7 @@
 .shifts-card .stock-data .header .second {
   /* border: 1px solid yellow; */
   /* margin-right: 20px; */
+  position: relative;
 }
 .shifts-card .stock-data .header .second button {
   width: 90px;
@@ -61,6 +62,31 @@
   transition: 0.2s all linear;
   background: rgb(211, 198, 246);
   color: rgb(37, 6, 109);
+}
+.shifts-card .stock-data .header .second .more-menue {
+  background: gray;
+  width: 150px;
+  height: 130px;
+  padding-top: 8px;
+  border-radius: 0.4em;
+  position: absolute;
+  left: 150px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.2s all ease-in-out;
+}
+.shifts-card .stock-data .header .second .more-menue button {
+  background: navy;
+  color: whitesmoke;
+  width: 100%;
+  border-radius: 0em;
+  margin-left: 0px;
+  text-align: left;
+  text-indent: 5px;
+}
+.shifts-card .stock-data .header .second .more-menue button:hover {
+  background: rgb(121, 121, 226);
 }
 
 .shifts-card .stock-data .body .head .date-dv {
@@ -264,18 +290,24 @@
   top: 0px;
   left: 0px;
   background: #00000024;
+  display: block;
+}
+
+.shift_pops {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .pop_dv .new_shift_pop {
-  width: 80%;
-  height: 90%;
+  width: 70%;
+  height: 95%;
   border: 1px solid gainsboro;
   border-radius: 0.3em;
   background: gray;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   /* justify-content: space-between; */
@@ -313,7 +345,7 @@
   background: skyblue;
 }
 .pop_dv .new_shift_pop .content {
-  width: 50%;
+  width: 80%;
   height: 90%;
   border: 1px solid black;
 }
@@ -389,6 +421,9 @@
 .pop_dv .new_shift_pop .content .body .shifts_form .bdy-second {
   background: rgb(12, 98, 121);
   width: 90%;
+
+  padding: 5px;
+  transition: 0.2s all ease-in-out;
 }
 .pop_dv .new_shift_pop .content .body .shifts_form .bdy-second .title {
   padding-top: 10px;
@@ -427,7 +462,15 @@
 .shifts_form .bdy-second .dvs .emp-drop-down-1 {
   width: 40%;
   background: rgb(146, 130, 39);
+  padding: 8px;
   position: relative;
+}
+.shifts_form .bdy-second .dvs .emp-drop-down-1 b {
+  color: rgb(52, 18, 111);
+  margin-bottom: 6px;
+  font-size: 20px;
+  position: relative;
+  bottom: 5px;
 }
 
 .shifts_form .bdy-second .dvs .emp-drop-down-1 .head {
@@ -493,7 +536,15 @@
 .shifts_form .bdy-second .dvs .emp-drop-down-2 {
   width: 60%;
   background: rgb(47, 41, 4);
+  padding: 8px;
   position: relative;
+}
+.shifts_form .bdy-second .dvs .emp-drop-down-2 b {
+  color: rgb(52, 18, 111);
+  margin-bottom: 6px;
+  font-size: 20px;
+  position: relative;
+  bottom: 5px;
 }
 .shifts_form .bdy-second .dvs .emp-drop-down-2 .head {
   color: rgb(73, 50, 205);
@@ -583,13 +634,11 @@
   color: aqua;
 }
 .shifts_form .bdy-second .dvs .second-dv {
-  margin-top: 8px;
   width: 250px;
   /* border: 1px solid black; */
   display: flex;
   flex-direction: row;
   /* justify-content: space-evenly; */
-  
 }
 .shifts_form .bdy-second .dvs .second-dv label {
   /* border: 1px solid blue; */
@@ -603,7 +652,7 @@
 }
 .shifts_form .bdy-second .dvs .second-dv label input {
   width: 100px;
-  border-radius: .4em;
+  border-radius: 0.4em;
   padding: 8px;
   cursor: pointer;
 }
@@ -614,7 +663,259 @@
 .pop_dv .new_shift_pop .footer {
   margin-top: 5px;
   width: 100%;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+}
+.pop_dv .new_shift_pop .footer .btns {
+  /* background: rgb(145, 113, 113); */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 70px;
+}
+.pop_dv .new_shift_pop .footer .btns button {
+  width: 100px;
+  margin-right: 10px;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 0.2s all ease-in-out;
+  border-radius: 0.4em;
+}
+.pop_dv .new_shift_pop .footer .btns button .btn-content {
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 100%;
+
+  padding: 2px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 0.2s all ease-in-out;
+}
+.pop_dv .new_shift_pop .footer .btns button .btn-content img {
+  width: 15px;
+}
+.pop_dv .new_shift_pop .footer .btns button .btn-spinner {
+  width: 22px;
+  height: 22px;
+  display: none;
+  border: 5px solid green;
+  /* border-right-color: navy; */
+  border-top-color: navy;
+  border-radius: 50%;
+  transition: 0.2s all ease-in-out;
+  animation: saveSpinner 3s infinite linear;
+}
+
+/* UPDATE SHIFTS POP STYLES */
+
+.pop_dv .edit_shift_pop {
+  width: 50%;
+  height: 60%;
+  border: 1px solid red;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.2s all ease-in-out;
+}
+.pop_dv .edit_shift_pop .head {
+  width: 100%;
+  height: 8%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: skyblue;
+}
+.pop_dv .edit_shift_pop .head span {
+  margin-left: 8px;
+}
+.pop_dv .edit_shift_pop .head button {
+  margin-right: 8px;
+  cursor: pointer;
+  transition: 0.2s all ease-in;
+}
+.pop_dv .edit_shift_pop .body {
+  width: 100%;
+  height: 92%;
+  background: rgb(154, 140, 113);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.pop_dv .edit_shift_pop .body .inputs {
+  border: 1px solid red;
+  width: 70%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.pop_dv .edit_shift_pop .body .inputs .dv {
+  width: 60%;
+}
+.pop_dv .edit_shift_pop .body .inputs .date {
+  /* border: 1px solid rgb(148, 41, 151); */
+}
+.pop_dv .edit_shift_pop .body .inputs .date label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 8px;
+}
+.pop_dv .edit_shift_pop .body .inputs .date span {
+  padding: 8px;
+  color: rgb(0, 42, 255);
+  font-size: 18px;
+  font-weight: bolder;
+}
+.pop_dv .edit_shift_pop .body .inputs .date input {
+  width: 120px;
+  border: none;
+  padding: 8px;
+  border-radius: 0.4em;
+  cursor: pointer;
+}
+.pop_dv .edit_shift_pop .body .inputs .time {
+  /* border: 1px solid rgb(80, 167, 43); */
+  display: flex;
+  flex-direction: row;
+}
+.pop_dv .edit_shift_pop .body .inputs .time label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 8px;
+}
+.pop_dv .edit_shift_pop .body .inputs .time label span {
+  padding: 8px;
+  color: rgb(0, 42, 255);
+  font-size: 18px;
+  font-weight: bolder;
+}
+.pop_dv .edit_shift_pop .body .inputs .time label input {
+  width: 120px;
+  border: none;
+  padding: 8px;
+  border-radius: 0.4em;
+  cursor: pointer;
+}
+.pop_dv .edit_shift_pop .body .inputs .type {
+  /* border: 1px solid rgb(123, 81, 81); */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 8px;
+}
+.pop_dv .edit_shift_pop .body .inputs .type span {
+  padding: 8px;
+  color: rgb(0, 42, 255);
+  font-size: 18px;
+  font-weight: bolder;
+}
+.pop_dv .edit_shift_pop .body .inputs .type select {
+  width: 120px;
+  border: none;
+  padding: 8px;
+  border-radius: 0.4em;
+  cursor: pointer;
+}
+.pop_dv .edit_shift_pop .body .btns button {
+  cursor: pointer;
+  width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  border: none;
+  border-radius: 0.4em;
+}
+.pop_dv .edit_shift_pop .body .btns button .txt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 8px;
+}
+.pop_dv .edit_shift_pop .body .btns button .txt img {
+  width: 15px;
+  margin-left: 5px;
+}
+.pop_dv .edit_shift_pop .body .btns button .save_and_publish_spinner {
+  width: 25px;
+  height: 25px;
+  display: none;
+  border: 5px solid green;
+  border-top-color: navy;
+  border-radius: 50%;
+  animation: saveSpinner 3s infinite linear;
+}
+.pop_dv .edit_shift_pop img {
+  width: 20px;
+}
+
+/* SHIFT COVERS POP STYLES */
+
+.shift_covers_pop {
+  width: 70%;
+  height: 80%;
+  border: 1px solid red;
+}
+.shift_covers_pop .head {
+  width: 100%;
+  height: 8%;
+  background: skyblue;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.shift_covers_pop .head span {
+  margin-left: 8px;
+}
+.shift_covers_pop .head img {
+  margin-right: 8px;
+}
+.shift_covers_pop .body {
+  width: 100%;
+  height: 92%;
+  background: rgb(126, 113, 88);
+  display: flex;
+  flex-direction: row;
+}
+.shift_covers_pop .body .create-shift-dv {
+  width: 50%;
+  height: 100%;
+  background: rgb(134, 125, 125);
+}
+.shift_covers_pop .body .created-shifts-dv {
+  width: 50%;
+  height: 100%;
+  background: rgb(122, 133, 107);
+}
+.shift_covers_pop img {
+  width: 20px;
+}
+
+@keyframes saveSpinner {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .pop_dv .new_shift_pop img {
   width: 20px;
